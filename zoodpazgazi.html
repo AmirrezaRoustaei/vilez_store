@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>زودپز گازی ولز</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h2>مدل‌های زودپز گازی برند ولز</h2>
+
+
+<div>
+    <img src="../assets/zoodpazgazi_vl6039.jpg" width="200">
+    <p>مدل VL-6039 - قیمت: ۷٬۶۷۰٬۰۰۰ تومان زودپز گازی  </p>
+    <button onclick="addToCart('VL-6039', '7670000')">افزودن به سبد خرید</button>
+  </div>
+
+  <hr>
+  <h3>سبد خرید</h3>
+  <ul id="cart-items"></ul>
+
+  <script>
+    let cart = [];
+    function addToCart(model, price) {
+      cart.push({model, price});
+      alert(model + ' به سبد خرید اضافه شد');
+      updateCart();
+    }
+
+    function updateCart() {
+      const list = document.getElementById('cart-items');
+      list.innerHTML = '';
+      cart.forEach(item => {
+        list.innerHTML += `<li>${item.model} - ${item.price} تومان</li>`;
+      });
+    }
+  </script>
+
+  <a href="../index.html">بازگشت به صفحه اصلی</a>
+</body>
+</html>

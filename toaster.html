@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>زودپز برقی ولز</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h2>مدل‌های توستر برند ولز</h2>
+
+  <div>
+    <img src="../assets/toaster_vl3010.jpg" width="200">
+    <p>مدل VL-3010 - قیمت: ۳٬۴۰۰٬۰۰۰ تومان توستر  </p>
+    <button onclick="addToCart('VL-3010', '3400000')">افزودن به سبد خرید</button>
+  </div>
+  <div>
+    <input type="button" id="button0" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button1" style="color:rgb(0, 138, 251); width:10px; height: 5px" />  
+   <input type="button" id="button2" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button3" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button4" style="color:rgb(0, 138, 251); width:10px; height: 5px" />      
+</div>
+  
+  <div>
+    <img src="../assets/toaster_vl3020.jpg" width="200">
+    <p>مدل VL-3020 - قیمت: ۳٬۳۵۰٬۰۰۰ تومان توستر  </p>
+    <button onclick="addToCart('VL-3020', '3350000')">افزودن به سبد خرید</button>
+  </div>
+  <div>
+    <input type="button" id="button0" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button1" style="color:rgb(0, 138, 251); width:10px; height: 5px" />  
+   <input type="button" id="button2" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button3" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button4" style="color:rgb(0, 138, 251); width:10px; height: 5px" />      
+</div>
+
+<div>
+    <img src="../assets/toaster_vl3030.jpg" width="200">
+    <p>مدل VL-3030 - قیمت: ۳٬۴۰۰٬۰۰۰ تومان توستر  </p>
+    <button onclick="addToCart('VL-3030', '3400000')">افزودن به سبد خرید</button>
+  </div>
+
+  <hr>
+  <h3>سبد خرید</h3>
+  <ul id="cart-items"></ul>
+
+  <script>
+    let cart = [];
+    function addToCart(model, price) {
+      cart.push({model, price});
+      alert(model + ' به سبد خرید اضافه شد');
+      updateCart();
+    }
+
+    function updateCart() {
+      const list = document.getElementById('cart-items');
+      list.innerHTML = '';
+      cart.forEach(item => {
+        list.innerHTML += `<li>${item.model} - ${item.price} تومان</li>`;
+      });
+    }
+  </script>
+
+  <a href="../index.html">بازگشت به صفحه اصلی</a>
+</body>
+</html>

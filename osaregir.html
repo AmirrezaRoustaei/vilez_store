@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>عصاره گیر ولز</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h2>مدل‌های عصاره گیر برند ولز</h2>
+
+
+<div>
+    <img src="../assets/osaregir.jpg" width="200">
+    <p>مدل VL-7010 - قیمت: ۸٬۵۷۰٬۰۰۰ تومان عصاره گیر  </p>
+    <button onclick="addToCart('VL-7010', '8570000')">افزودن به سبد خرید</button>
+  </div>
+
+  <hr>
+  <h3>سبد خرید</h3>
+  <ul id="cart-items"></ul>
+
+  <script>
+    let cart = [];
+    function addToCart(model, price) {
+      cart.push({model, price});
+      alert(model + ' به سبد خرید اضافه شد');
+      updateCart();
+    }
+
+    function updateCart() {
+      const list = document.getElementById('cart-items');
+      list.innerHTML = '';
+      cart.forEach(item => {
+        list.innerHTML += `<li>${item.model} - ${item.price} تومان</li>`;
+      });
+    }
+  </script>
+
+  <a href="../index.html">بازگشت به صفحه اصلی</a>
+</body>
+</html>

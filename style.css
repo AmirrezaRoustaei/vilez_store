@@ -1,28 +1,17 @@
-
 body {
-  font-family: sans-serif;
-  background: #f7f7f7;
-  direction: rtl;
-  padding: 20px;
-}
-header {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-nav button {
-  margin: 5px;
-  padding: 10px 20px;
-}
-.section {
-  display: none;
-}
-.section.active {
-  display: block;
-}
-.subsection {
-  background: white;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 5px;
-}
+    font-family: sans-serif;
+    background-color: #fefefe;
+    padding: 20px;
+    direction: rtl;
+    text-align: right;
+  }
+  
+  ul li {
+    margin: 10px 0;
+  }
+  
+  a {
+    color: darkblue;
+    text-decoration: none;
+  }
+  
